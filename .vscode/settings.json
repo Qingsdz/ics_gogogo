@@ -1,0 +1,14 @@
+{
+    "files.autoSave": "afterDelay",
+    "clangd.path": "/home/green/Applications/clangd_19.1.2/bin/clangd",
+    "clangd.arguments": ["-log=verbose", 
+                         "-pretty", 
+                         "--background-index", 
+                         //"--query-driver=/bin/arm-buildroot-linux-gnueabihf-g++", //for cross compile usage
+                        "--compile-commands-dir=/home/green/Sources/ics2024/nemu/"
+                    ],
+    "makefile.configureOnOpen": false,
+    "editor.largeFileOptimizations": false,
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "cmake.showOptionsMovedNotification": false,
+}

@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch NEMU",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/nemu/build/riscv32-nemu-interpreter",
+            "args": ["--log=${workspaceFolder}/nemu/build/nemu-log.txt"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/nemu",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "symbolLoadInfo": {
+                "loadAll": true,
+                "exceptionList": "${workspaceFolder}/nemu/build/riscv32-nemu-interpreter"
+            },
+            "additionalSOLibSearchPath": "${workspaceFolder}/nemu/build",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "Set Disassembly Flavor to Intel",
+                    "text": "-gdb-set disassembly-flavor intel",
+                    "ignoreFailures": true
+                }
+            ],
+            "internalConsoleOptions": "neverOpen"
+        }
+    ]
+}
