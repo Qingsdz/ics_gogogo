@@ -32,7 +32,6 @@ static void welcome() {
   Log("Build time: %s, %s", __TIME__, __DATE__);
   printf("Welcome to %s-NEMU!\n", ANSI_FMT(str(__GUEST_ISA__), ANSI_FG_YELLOW ANSI_BG_RED));
   printf("For help, type \"help\"\n");
-  Log("Exercise: Please remove me in the source code and compile NEMU again.");
 }
 
 #ifndef CONFIG_TARGET_AM
@@ -120,6 +119,8 @@ void init_monitor(int argc, char *argv[]) {
 
   /* Load the image to memory. This will overwrite the built-in image. */
   long img_size = load_img();
+
+
 
   /* Initialize differential testing. */
   init_difftest(diff_so_file, img_size, difftest_port);
